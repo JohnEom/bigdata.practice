@@ -1,0 +1,32 @@
+package casting;
+
+public class CastingEx {
+
+	public static void main(String[] args) {
+		
+
+		test();
+	}
+	/*
+	 * 퍼블릭 메인에 테스트 메서드를 불러옴
+	 * 테스트 메서드는 반복 - 포문, 정수 i가 0에서 256까지 1씩 증가할 때,
+	 * i를 캐릭터로 강제 캐스팅 시켜 타입이 캐릭터인 변수 이름 c에 넣고, 
+	 * 그 값을 출력한다.
+	 * 그리고, i%16 ==15일때마다, 한줄 내린다.
+	 */
+	
+	static void test() {
+		
+		for(int i=0; i<256; i++) {
+			
+			char c = (char)i;
+			
+			System.out.print(c);
+			
+			if(i%16 == 15) {
+				System.out.println();
+			}
+		}
+		
+	}
+}
