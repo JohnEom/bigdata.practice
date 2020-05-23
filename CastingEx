@@ -3,8 +3,9 @@ package casting;
 public class CastingEx {
 
 	public static void main(String[] args) {
-		
 
+		int a = (char) 'a';
+		System.out.println(a);
 		test();
 	}
 	/*
@@ -30,3 +31,23 @@ public class CastingEx {
 		
 	}
 }
+/*
+0123456789ABCDEF
+					0	15	00 ff
+!"#$%&'()*+,-./		16	31	01
+0123456789:;<=>?	32	47	02
+@ABCDEFGHIJKLMNO	48	63	03
+PQRSTUVWXYZ[\]^_	64	79	04
+`abcdefghijklmno	80	95	05
+pqrstuvwxyz{|}~	96	111	06
+					112	127	07
+					128	143	08
+ ¡¢£¤¥¦§¨©ª«¬­®¯	144	159	09
+°±²³´µ¶·¸¹º»¼½¾¿	160	175	0a
+ÀÁÂÃÄÅÆÇÈÉÊËÌÍÎÏ	176	191	0b
+ÐÑÒÓÔÕÖ×ØÙÚÛÜÝÞß	192	207	0c
+àáâãäåæçèéêëìíîï	208	223	0d
+ðñòóôõö÷øùúûüýþÿ	224	239	0e
+					240	255	0f
+					256
+*/
