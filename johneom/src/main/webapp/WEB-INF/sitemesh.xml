@@ -1,8 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE XML>
-<!-- 작성자 : 김승준 -->
-<!-- 작성일 : 2017-01-13 -->
-<!-- sitemesh 설정에 대한 정의 xml 파일 -->
 <sitemesh>
 	<!-- 레이아웃 꾸미기는 /WEB-INF/decorators.xml로 정의 -->
 	<property name="decorators-file" value="/WEB-INF/decorators.xml" />
