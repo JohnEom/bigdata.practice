@@ -21,8 +21,8 @@
 		<beans:property name="suffix" value=".jsp" />
 	</beans:bean>
 	
-	<context:component-scan base-package="com.johneom.main" />
+	<context:component-scan base-package="com.johneom" />
 	
-	
+	<!-- src/main/webapp/ 폴더 중 WEB-INF/views/ 폴더 내에, 확장자가 jsp인 파일만 열람 가능하다. 이 외, 내부 파일 열람은 해킹과 다름 없다. -->
 	
 </beans:beans>
