@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<!-- 1. com.johneom.board.mapper.BoardMapper 인터페이스 선언
+	 2. root-contenxt.xml mybatis:scan tag로 기본 패키지 지정
+	 3. com.johneom.board.mapper.BoardMapper.xml 실행 작성
+	 	- src/main/resource -->
+	 	
+<mapper namespace="com.johneom.board.mapper.BoardMapper">
+	<select id="list" resultType="com.johneom.board.vo.BoardVO">
+		<!-- 빨간 표시줄 스펠체크 제거 -->
+		<!-- [CDATA['여기 내용은 프로그램 내장 스펠 체크를 건너뛰고 db에 바로 넘긴다.']]-->
+		<![CDATA[
+		select no, title, writer, writeDate, hit
+		from board
+		order by no desc
+		]]>
+	</select>
+
+	<insert id="write">
+		insert into board(no,title,content,writer,pw)
+		values(board_seq.nextval,#{title},#{content},#{writer},#{pw})
+	</insert>
+
+	<select id="view" resultType="com.johneom.board.vo.BoardVO">
+		select no, title, content, writer, writeDate, hit
+		from board
+		where no = #{no}
+	</select>
+	
+	<update id="increase">
+		<![CDATA[
+		update board
+		set hit = hit + 1
+		where no = #{no}
+		]]>
+	</update>
+	
+	<update id="update">
+		<![CDATA[
+		update board
+		set title=#{title},content=#{content},writer=#{writer}
+		where no = #{no} and pw=#{pw}
+		]]>
+	</update>
+
+	<delete id="delete">
+		<![CDATA[
+		delete from board
+		where no = #{no} and pw=#{pw}
+		]]>
+	</delete>
+	
+
+</mapper>
