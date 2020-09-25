@@ -23,6 +23,6 @@
 		<property name="dataSource" ref="dataSource" />
 	</bean>
 
-	<mybatis-spring:scan base-package="com.ftw" />
-	<context:component-scan	base-package="com.ftw" />
+	<mybatis-spring:scan base-package="com.johneom" />
+	<context:component-scan	base-package="com.johneom" />
 </beans>

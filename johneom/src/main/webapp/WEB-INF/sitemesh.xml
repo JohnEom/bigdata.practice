@@ -2,7 +2,8 @@
 <!DOCTYPE XML>
 <sitemesh>
 	<!-- 레이아웃 꾸미기는 /WEB-INF/decorators.xml로 정의 -->
-	<property name="decorators-file" value="/WEB-INF/decorators.xml" />
+	<property name="decorators-file"
+		value="/WEB-INF/decorators.xml" />
 	<!-- 위에 property로 정의된 xml를 포함 시킨다. -->
 	<excludes file="${decorators-file}" />
 
@@ -15,7 +16,6 @@
 	<!-- HTML 조립기 -->
 	<decorator-mappers>
 		<mapper
-
 			class="com.opensymphony.module.sitemesh.mapper.ConfigDecoratorMapper">
 			<param name="config" value="${decorators-file}" />
 		</mapper>
